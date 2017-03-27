@@ -23,3 +23,6 @@ As a user, I want to be able to:
 - See the weather based on a location that I enter
   - *Later iteration* See weather right after log-in based on my last entered location
 - *Later iteration* Based on current feels-like temperature, see my most recent logs within a certain range of that temp to see how I dressed and felt
+
+## Wireframe
+![alt text](https://raw.githubusercontent.com/cathyob/bundleUP/develop/app/Wireframe.png "Wireframe")
