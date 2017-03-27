@@ -1,0 +1,12 @@
+<h4>Your past logs:</h4>
+
+{{#each model as |log|}}
+  {{log-entries/card
+    log=log}}
+{{/each}}
+{{!-- <br>
+{{#link-to 'logs.new'}}<button class="btn btn-info btn-sm">New Log</button>{{/link-to}}
+<br> --}}
+<br>
+
+{{#link-to 'index'}}Back{{/link-to}}!
