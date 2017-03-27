@@ -1,2 +1,17 @@
-<h3>{{log.dateTime}}</h3>
-{{!-- TODO LIST OF LOG DETAILS HERE TODO --}}
+<h3>{{log.dateTime}} - {{log.location}}</h3>
+<ul>
+  <li>Date and Time: {{log.dateTime}}</li>
+  <li>Location: {{log.location}}</li>
+  <li>Temperature: {{log.temp}}&deg;</li>
+  <li>Feels Like Temperature: {{log.feelsLike}}&deg;</li>
+  <li>Weather Conditions: {{log.weatherConditions}}</li>
+  <li>Bottom Layers: {{log.bottomLayers}}</li>
+  <li>Top Layers: {{log.topLayers}}</li>
+  <li>Accessories: {{log.accessories}}</li>
+  <li>Activity Level: {{log.activityLevel}}</li>
+  <li>Comfort Level: {{log.comfortLevel}}</li>
+</ul>
+<button class="btn btn-primary btn-xs" {{action 'edit'}}>Edit</button>
+<button class="btn btn-danger btn-xs" {{action 'delete'}}>Delete?</button>
+<br>
+<br>
