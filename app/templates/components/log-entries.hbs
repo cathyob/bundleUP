@@ -1,6 +1,5 @@
 <h3>{{log.dateTime}} - {{log.location}}</h3>
 <ul>
-  <li>Date and Time: {{log.dateTime}}</li>
   <li>Location: {{log.location}}</li>
   <li>Temperature: {{log.temp}}&deg;</li>
   <li>Feels Like Temperature: {{log.feelsLike}}&deg;</li>
@@ -8,10 +7,22 @@
   <li>Bottom Layers: {{log.bottomLayers}}</li>
   <li>Top Layers: {{log.topLayers}}</li>
   <li>Accessories: {{log.accessories}}</li>
-  <li>Activity Level: {{log.activityLevel}}</li>
-  <li>Comfort Level: {{log.comfortLevel}}</li>
+  <li>Activity Level(1-5): {{log.activityLevel}}
+    <br>1 = No activity (e.g. waiting in line or sitting)
+    <br>2 = Light Activity (e.g. light walking)
+    <br>3 = Moderate Activity (e.g. quick pace)
+    <br>4 = High Activity (e.g. jogging, hiking with no pack)
+    <br>5 = Very High Activity (e.g. running, hiking with pack)
+  </li>
+  <li>Comfort Level(1-5): {{log.comfortLevel}}
+    <br>1 = felt Cold
+    <br>2 = felt Chilly
+    <br>3 = felt Just Right
+    <br>4 = felt Warm
+    <br>5 = felt Hot
+  </li>
 </ul>
-<button class="btn btn-primary btn-xs" {{action 'edit'}}>Edit</button>
-<button class="btn btn-danger btn-xs" {{action 'delete'}}>Delete?</button>
+<button class="btn btn-primary btn-xs" {{action 'editLog'}}>Edit</button>
+<button class="btn btn-danger btn-xs" {{action 'deleteLog'}}>Delete?</button>
 <br>
 <br>
