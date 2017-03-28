@@ -5,12 +5,12 @@ export default Ember.Component.extend({
   actions: {
     editLog () {
       const log = this.get('log');
-      console.log('Got to the route to edit log');
+      // console.log('Got to the route to edit log');
       return this.sendAction('editLog', log);
     },
     deleteLog () {
       const log = this.get('log');
-      console.log('Got to log to delete');
+      // console.log('Got to log to delete');
       return this.sendAction('deleteLog', log);
     },
   },

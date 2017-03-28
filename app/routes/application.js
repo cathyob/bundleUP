@@ -3,8 +3,11 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
-
   actions: {
+    // createLog (log) {
+    //   log.save();
+    //   .then(() => this.transitionTo('index'));
+    // },
     signOut () {
       this.get('auth').signOut()
         .then(() => this.get('store').unloadAll())

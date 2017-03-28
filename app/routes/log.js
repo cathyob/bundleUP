@@ -6,11 +6,11 @@ model (params) {
 },
 actions: {
   editLogDone (log) {
-    console.log('Got to the route to edit log');
+    // console.log('Got to the route to edit log');
     this.transitionTo('log.edit', log);
   },
   deleteLogDone (log) {
-    console.log('Got to the route to delete log');
+    // console.log('Got to the route to delete log');
     log.destroyRecord();
     this.transitionTo('logs');
   },

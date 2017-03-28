@@ -1,7 +1,5 @@
 {{!-- TODO LOOK INTO REQUIRED FIELDS, right now they are allowing edit to delete prior detail and lets you save with no issues but it should error and tell user to fill out required fields TODO --}}
 <form class="form-group" {{action 'save' on='submit'}}>
-  {{!-- not allowing dateTime edit due to null issue --}}
-  {{!-- Date and Time: {{input class="form-control" value=log.dateTime}} --}}
   Location: *{{input class="form-control" value=log.location}}
   Temperature: {{input class="form-control" value=log.temp}}
   Feels Like Temperature: *{{input class="form-control" value=log.feelsLike}}

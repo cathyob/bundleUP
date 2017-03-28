@@ -1,10 +1,12 @@
 {{!-- <h1>Current Weather</h1> --}}
 
-<h3>Create New Log</h3>
-{{!-- Insert template for new report here plus button to submit (that also reloads past logs list) --}}
-{{!-- {{#link-to 'log.new'}}<button class="btn btn-info btn-sm">Save</button>{{/link-to}} --}}
+{{!-- <h3>Create and View Logs</h3>
+Look at your past logs and create new ones {{#link-to 'logs'}}here{{/link-to}}! --}}
 
+<h3>Create New Log</h3>
+{{log-entries/edit list=model save='createLog' cancel='cancel'}}
 
 <h3>Past Logs</h3>
-{{!-- Insert link of all logs here --}}
 Look at your past logs {{#link-to 'logs'}}here{{/link-to}}!
+<br>
+<br>

@@ -1,14 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  actions: {
-  saveLog (log) {
-    // console.log('Getting to saveLog');
+  model () {
+  return this.get('store').createRecord('log', {});
+},
+actions: {
+  createLog (log) {
     log.save()
     .then(() => this.transitionTo('logs'));
   },
   cancel () {
-    // console.log('Getting to cancel');
     history.back();
   },
 },
