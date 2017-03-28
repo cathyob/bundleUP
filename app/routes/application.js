@@ -1,18 +1,45 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
-  auth: Ember.inject.service(),
-  flashMessages: Ember.inject.service(),
-  actions: {
-    createLog (log) {
+
       // TODO: Ask how to do ajax calls to google api, ask about validating data
       // and validate on client AND server
 
       // TODO: Validate all the data, if something is not right then
       // do this.get('flashMessages').warning('Bad data...') else
       // do below
-      let newLog = this.get('store').createRecord('log', log);
-      newLog.save();
+      // let newLog = this.get('store').createRecord('log', log);
+      // newLog.save();
+export default Ember.Route.extend({
+  auth: Ember.inject.service(),
+  flashMessages: Ember.inject.service(),
+  actions: {
+    createLog (log) {
+      let valid = function() {
+        return (log.location !== undefined &&
+                log.location.length > 0 &&
+                log.temp >= -100 &&
+                log.temp <= 150 &&
+                log.feelsLike !== undefined &&
+                log.feelsLike.length > 0 &&
+                log.feelsLike >= -100 &&
+                log.feelsLike <= 150 &&
+                log.weatherConditions !== undefined &&
+                log.weatherConditions.length > 0 &&
+                log.activityLevel !== undefined &&
+                log.activityLevel >= 1 &&
+                log.activityLevel <= 5 &&
+                log.comfortLevel !== undefined &&
+                log.comfortLevel >= 1 &&
+                log.comfortLevel <= 5 );
+      };
+      if (valid()) {
+          let newLog = this.get('store').createRecord('log', log);
+          newLog.save();
+      } else {
+        this.get('flashMessages')
+        .danger('Please be sure all required fields are filled in correctly.');
+        // console.log('There was an error');
+     }
     },
     signOut () {
       this.get('auth').signOut()

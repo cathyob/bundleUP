@@ -1,4 +1,4 @@
-{{!-- TODO LOOK INTO REQUIRED FIELDS, right now they are allowing edit to delete prior detail and lets you save with no issues but it should error and tell user to fill out required fields TODO --}}
+{{!-- TODO LOOK INTO REQUIRED FIELDS, they are acting like a form is submitted since I don't have any if statements validating the data yet TODO --}}
 <form class="form-group" {{action 'save' on='submit'}}>
   Location: *{{input class="form-control" value=log.location}}
   Temperature: {{input class="form-control" value=log.temp}}
