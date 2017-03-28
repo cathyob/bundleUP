@@ -6,15 +6,13 @@ export default Ember.Route.extend({
   actions: {
     createLog (log) {
       // TODO: Ask how to do ajax calls to google api, ask about validating data
-      // and validate on client AND server, ask how to clear form data
+      // and validate on client AND server
 
       // TODO: Validate all the data, if something is not right then
       // do this.get('flashMessages').warning('Bad data...') else
       // do below
       let newLog = this.get('store').createRecord('log', log);
       newLog.save();
-    },
-    clear() {
     },
     signOut () {
       this.get('auth').signOut()
