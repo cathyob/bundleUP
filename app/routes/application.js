@@ -1,21 +1,24 @@
 import Ember from 'ember';
+import { storageFor } from 'ember-local-storage';
 
+      // TODO: Ask how to do ajax calls to google api
+      // TODO validate data on client AND server
 
-      // TODO: Ask how to do ajax calls to google api, ask about validating data
-      // and validate on client AND server
-
-      // TODO: Validate all the data, if something is not right then
-      // do this.get('flashMessages').warning('Bad data...') else
-      // do below
-      // let newLog = this.get('store').createRecord('log', log);
-      // newLog.save();
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
+  credentials: storageFor('auth'),
+  isAuthenticated: Ember.computed.bool('credentials.token'),
   flashMessages: Ember.inject.service(),
   actions: {
     createLog (log) {
-      let newLog = this.get('store').createRecord('log', log);
-      newLog.save();
+      if(this.get('isAuthenticated') === true) {
+        let newLog = this.get('store').createRecord('log', log);
+        newLog.save()
+        .then(() => this.get('flashMessages').success('Your log has been saved!'));
+      } else {
+        this.transitionTo('sign-in')
+        .then(() => this.get('flashMessages').warning('Please sign-in to save your log.'));
+      }
     },
     signOut () {
       this.get('auth').signOut()
