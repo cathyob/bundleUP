@@ -1,6 +1,6 @@
 <form class="form-group" {{action 'save' on='submit'}}>
   Location: <span class="attention">*</span>{{input class="form-control" value=log.location required="true" maxlength="50"}}
-  Temperature: <span class="attention">Numbers only</span>{{input class="form-control" value=log.temp type="number"}}
+  Temperature: <span class="attention">(Numbers only)</span>{{input class="form-control" value=log.temp type="number"}}
   Feels Like Temperature: <span class="attention">* (Numbers only)</span>{{input class="form-control" value=log.feelsLike type="number" required="true"}}
   Weather Conditions: <span class="attention">*</span>{{input class="form-control" value=log.weatherConditions required="true" maxlength="50"}}
   Bottom Layers: {{input class="form-control" value=log.bottomLayers maxlength="200"}}
