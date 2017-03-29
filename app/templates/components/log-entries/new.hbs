@@ -1,0 +1,32 @@
+<p class="attention">* Required field</p>
+<form class="form-group" {{action 'save' on='submit'}}>
+  Location: <span class="attention">*</span>{{input class="form-control" value=log.location required="true" maxlength="50"}}
+  Temperature: <span class="attention">(Numbers only)</span>{{input class="form-control" value=log.temp type="number"}}
+  Feels Like Temperature: <span class="attention">* (Numbers only)</span>{{input class="form-control" value=log.feelsLike type="number" required="true"}}
+  Weather Conditions: <span class="attention">*</span>{{input class="form-control" value=log.weatherConditions required="true" maxlength="50"}}
+  Bottom Layers: {{input class="form-control" value=log.bottomLayers maxlength="200"}}
+  Top Layers: {{input class="form-control" value=log.topLayers maxlength="200"}}
+  Accessories: {{input class="form-control" value=log.accessories maxlength="200"}}
+  <div class="level">
+    <div class="activity">
+      Activity Level: <span class="attention">* (1-5 scale)</span>{{input class="form-control" value=log.activityLevel type="number" min="1" max="5" required="true"}}
+      <br>1 = No activity (e.g. waiting in line or sitting)
+      <br>2 = Light Activity (e.g. light walking)
+      <br>3 = Moderate Activity (e.g. quick pace)
+      <br>4 = High Activity (e.g. jogging, hiking with no pack)
+      <br>5 = Very High Activity (e.g. running, hiking with pack)
+    </div>
+    <div class="comfort">
+      Comfort Level: <span class="attention">* (1-5 scale)</span>{{input class="form-control" value=log.comfortLevel type="number" min="1" max="5" required="true"}}
+      <br>1 = felt Cold
+      <br>2 = felt Chilly
+      <br>3 = felt Just Right
+      <br>4 = felt Warm
+      <br>5 = felt Hot
+    </div>
+  </div>
+  <div class="save-btn">
+    <button class="btn btn-warning btn-xs" type="submit">Save</button>
+  </div>
+</form>
+<button class="btn btn-xs btn-danger" {{action 'clear'}}>Clear?</button>

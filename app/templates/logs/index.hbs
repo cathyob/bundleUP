@@ -1,0 +1,10 @@
+<h3>Your past logs:</h3>
+
+{{#each model as |log|}}
+  {{log-entries/card
+    log=log}}
+{{/each}}
+
+<br>
+
+{{#link-to 'index'}}Back{{/link-to}}!
