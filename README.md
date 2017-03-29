@@ -26,3 +26,8 @@ As a user, I want to be able to:
 
 ## Wireframe
 ![alt text](https://raw.githubusercontent.com/cathyob/bundleUP/develop/app/Wireframe.png "Wireframe")
+
+## Hurdles
+Figuring out how to validate data and stop the form from clearing if something wasn't valid was something I hadn't seen or done yet. I spent some time looking at different forums and documentation and was trying one approach until I found ember's input helpers. I worked out the combination needed and this solution, from finding the documentation, completion, and testing took less than 30 minutes.
+I had filed an issue which shows the process:
+https://github.com/ga-wdi-boston/capstone-project/issues/523
