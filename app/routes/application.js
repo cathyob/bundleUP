@@ -26,9 +26,11 @@ export default Ember.Route.extend({
                 log.weatherConditions !== undefined &&
                 log.weatherConditions.length > 0 &&
                 log.activityLevel !== undefined &&
+                // (log.activityLevel === 1 || log.activityLevel === 2 || log.activityLevel === 3 || log.activityLevel === 4 || log.activityLevel === 5) &&
                 log.activityLevel >= 1 &&
                 log.activityLevel <= 5 &&
                 log.comfortLevel !== undefined &&
+                // (log.comfortLevel === 1 || log.comfortLevel === 2 || log.comfortLevel === 3 || log.comfortLevel === 4 || log.comfortLevel === 5) &&
                 log.comfortLevel >= 1 &&
                 log.comfortLevel <= 5 );
       };
