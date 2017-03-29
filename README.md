@@ -1,5 +1,13 @@
 # Welcome to bundleUP!
 
+FRONT END REPO: https://github.com/cathyob/bundleUP
+
+DEPLOYED FRONT END: https://cathyob.github.io/bundleUP/
+
+BACK END REPO: https://github.com/cathyob/bundleUpServer
+
+DEPLOYED BACK END:  https://bundleupcathyob.herokuapp.com/
+
 ## About
 
 I was inspired by my own struggle of wearing the wrong layers in Boston. I moved from Texas a little over a year before making this and am still aclimating to Boston winters. Just a few degrees difference could mean I'd be freezing one day but the next be too warm while wearing the same layers both days.
@@ -9,6 +17,7 @@ You can use this app to keep track of how you're feeling right now and describe 
 TODO An embedded screenshot of the app TODO
 
 ## User Stories
+
 As a user, I want to be able to:
 - Sign-up
 - Sign-in
@@ -29,6 +38,7 @@ As a user, I want to be able to:
 - Delete a past log
 
 ## Wireframe
+
 Home Screen:
 ![alt text](https://raw.githubusercontent.com/cathyob/bundleUP/develop/app/WireframeHome.png "Wireframe of Home Page")
 Past Log View:
@@ -63,11 +73,13 @@ It worked perfectly for what I needed.
 I've also hooked up two 3rd party APIs - Google for translating a zipcode into latitude/longitude and Dark Sky for retrieving weather data for that location.
 
 ## Hurdles
+
 Figuring out how to validate data and stop the form from clearing if something wasn't valid was something I hadn't seen or done yet. I spent some time looking at different forums and documentation and was trying one approach until I found ember's input helpers. I worked out the combination needed and this solution, from finding the documentation, completion, and testing took less than 30 minutes.
 I had filed an issue which shows the process:
 https://github.com/ga-wdi-boston/capstone-project/issues/523
 
 # Thank you!
+
 Thank you very much for checking out my app!
 Please be sure to try it out and let me know if you have any questions!
 https://cathyob.github.io/bundleUP/
