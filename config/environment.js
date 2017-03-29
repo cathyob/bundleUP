@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/bundleUP';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://bundleupcathyob.herokuapp.com/';
+    ENV.apiHost = 'https://bundleupcathyob.herokuapp.com';
   }
 
   return ENV;
