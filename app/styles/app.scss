@@ -1,7 +1,8 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
-$blue: #168dad;
+$blue: #3ec2c0;
+$orange: #ff6e40;
 
 // reduce size of all input fields
 input {
@@ -70,7 +71,7 @@ a {
 
 // a class for my required fields text
 .attention {
-  color: red;
+  color: $orange;
 }
 
 // temp and feels like to float
@@ -147,4 +148,20 @@ a {
   clear: both;
   margin-top: 12px;
   width: 100%;
+}
+
+.btn-warning {
+  background-color: $blue;
+  background-image: none;
+  border: 0;
+  box-shadow: 0;
+  text-shadow: 0;
+}
+
+.btn-danger {
+  background-color: $orange;
+  background-image: none;
+  border: 0;
+  box-shadow: 0;
+  text-shadow: 0;
 }
