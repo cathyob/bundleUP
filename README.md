@@ -78,6 +78,9 @@ Figuring out how to validate data and stop the form from clearing if something w
 I had filed an issue which shows the process:
 https://github.com/ga-wdi-boston/capstone-project/issues/523
 
+Also, I found and fixed a bug within the user sign-up process:
+https://github.com/ga-wdi-boston/capstone-project/issues/572
+
 # Thank you!
 
 Thank you very much for checking out my app!

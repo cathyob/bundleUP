@@ -1,12 +1,28 @@
 <p class="attention">* Required field</p>
 <form class="form-group" {{action 'save' on='submit'}}>
   Location: <span class="attention">*</span>{{input class="form-control" value=log.location required="true" maxlength="50"}}
-  Temperature: <span class="attention">(Numbers only)</span>{{input class="form-control" value=log.temp type="number"}}
-  Feels Like Temperature: <span class="attention">* (Numbers only)</span>{{input class="form-control" value=log.feelsLike type="number" required="true"}}
-  Weather Conditions: <span class="attention">*</span>{{input class="form-control" value=log.weatherConditions required="true" maxlength="50"}}
-  Bottom Layers: {{input class="form-control" value=log.bottomLayers maxlength="200"}}
-  Top Layers: {{input class="form-control" value=log.topLayers maxlength="200"}}
-  Accessories: {{input class="form-control" value=log.accessories maxlength="200"}}
+  <div class="temp">
+    <div class="temp-1">
+      Feels Like Temperature: <span class="attention">* (Numbers only)</span>{{input class="form-control" value=log.feelsLike type="number" required="true"}}
+    </div>
+    <div class="temp-2">
+      Temperature: <span class="attention">(Numbers only)</span>{{input class="form-control" value=log.temp type="number"}}
+    </div>
+  </div>
+  <div class="user-notes">
+    <div class="user-notes-1">
+      Weather Conditions: <span class="attention">*</span>{{input class="form-control" value=log.weatherConditions required="true" maxlength="50"}}
+    </div>
+    <div class="user-notes-2">
+      Accessories: {{input class="form-control" value=log.accessories maxlength="200"}}
+    </div>
+    <div class="user-notes-3">
+      Top Layers: {{input class="form-control" value=log.topLayers maxlength="200"}}
+    </div>
+    <div class="user-notes-4">
+      Bottom Layers: {{input class="form-control" value=log.bottomLayers maxlength="200"}}
+    </div>
+  </div>
   <div class="level">
     <div class="activity">
       Activity Level: <span class="attention">* (1-5 scale)</span>{{input class="form-control" value=log.activityLevel type="number" min="1" max="5" required="true"}}

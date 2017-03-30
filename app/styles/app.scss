@@ -1,30 +1,125 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+$blue: #168dad;
+
+// reduce size of all input fields
 input {
   height: 24px !important;
   padding: 2px !important;
 }
 
+// Make nav bar take up whole width
+.ember-application {
+  padding: 0 !important;
+}
+
+// Cancels out the edge-to-edge, whole width issue for content
+.col-md-8 {
+  margin: 15px;
+}
+
+// Main nav bar
+.navbar {
+  background: $blue;
+  border: 0;
+  border-radius: 0;
+  color: white;
+}
+
+// Nav bar drop shaddow
+.navbar-default {
+  box-shadow: none;
+}
+
+// Home button text
+.navbar-default,
+ .navbar-brand {
+    color: white !important;
+}
+
+// Sign Up/Sign In buttons
+.navbar-default,
+.navbar-nav > li > a {
+    color: white !important;
+}
+
+// Hamburger menu outline
+.navbar-default,
+  .navbar-toggle {
+    border-color: white !important;
+}
+
+.navbar-default,
+ .navbar-toggle,
+ .icon-bar {
+   // this is for the background behind the bars
+   background-color: $blue;
+    // this is for the grey horizontal bars
+    border: 1px solid white !important;
+}
+
+a {
+  color: $blue;
+  font-weight: bold;
+}
+
+// a class for my required fields text
 .attention {
   color: red;
 }
 
+// temp and feels like to float
+.temp-1 {
+  float: left;
+  padding-right: 4px;
+  width: 50%;
+}
+
+// temp and feels like to float
+.temp-2 {
+  float: left;
+  width: 50%;
+}
+
+// weather conditions and top layers on left
+.user-notes-1,
+.user-notes-3 {
+  float: left;
+  padding-right: 4px;
+  width: 50%;
+}
+
+// bottom layers and accessories on right
+.user-notes-2,
+.user-notes-4 {
+  float: left;
+  width: 50%;
+}
+
+// keeps user notes sections level with each other
+.user-notes,
+.level {
+  clear: both;
+}
+
+// activity level and scale description on left
 .activity {
   float: left;
   padding-right: 4px;
   width: 50%;
 }
 
+// comfort level and scale description on right
 .comfort {
   float: left;
-  width: 50%
+  width: 50%;
 }
 
+// save button needs
 .save-btn {
   clear: both;
   padding-top: 8px;
-  // display: block;
 }
 
 .logs-view {
