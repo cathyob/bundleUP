@@ -16,7 +16,11 @@ input {
 
 // Cancels out the edge-to-edge, whole width issue for content
 .row{
-  margin: 15px;
+  margin: 0 auto;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  width: 90%;
 }
 
 // Main nav bar
