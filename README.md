@@ -70,16 +70,13 @@ For the backend API I had to ensure input for certain details were integers so I
 https://www.npmjs.com/package/mongoose-integer
 It worked perfectly for what I needed.
 
-I've also hooked up two 3rd party APIs - Google for translating a zipcode into latitude/longitude and Dark Sky for retrieving weather data for that location.
-
 ## Hurdles
 
 Figuring out how to validate data and stop the form from clearing if something wasn't valid was something I hadn't seen or done yet. I spent some time looking at different forums and documentation and was trying one approach until I found ember's input helpers. I worked out the combination needed and this solution, from finding the documentation, completion, and testing took less than 30 minutes.
-I had filed an issue which shows the process:
+I had filed an issue which shows the process I took to solve this:
 https://github.com/ga-wdi-boston/capstone-project/issues/523
 
-Also, I found and fixed a bug within the user sign-up process:
-https://github.com/ga-wdi-boston/capstone-project/issues/572
+I added two 3rd party APIs to my API repo in preperation for a later iteration of this app. Google Maps Geocoding for latitute/logitude from a zip code and Dark Sky for the weather data based on that location. I filed an issue since this was the first time I'd used a 3rd party API in my own API and posted what I did here: https://github.com/ga-wdi-boston/capstone-project/issues/530
 
 # Thank you!
 

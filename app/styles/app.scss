@@ -15,7 +15,7 @@ input {
 }
 
 // Cancels out the edge-to-edge, whole width issue for content
-.col-md-8 {
+.row{
   margin: 15px;
 }
 
@@ -126,4 +126,21 @@ a {
   margin-bottom: 2px;
   margin-left: 16px;
   margin-top: 2px;
+}
+
+.log-card {
+  border: 1px solid $blue;
+  float: left;
+  margin: 4px;
+  height: 190px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  padding: 4px;
+  width: 300px;
+}
+
+.back-button {
+  clear: both;
+  margin-top: 12px;
+  width: 100%;
 }

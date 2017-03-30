@@ -1,10 +1,10 @@
-<h3>Your past logs:</h3>
+<div class="past-logs">
+  <h3>Your past logs:</h3>
 
-{{#each model as |log|}}
-  {{log-entries/card
-    log=log}}
-{{/each}}
+  {{#each model as |log|}}
+    {{log-entries/card
+      log=log}}
+  {{/each}}
+</div>
 
-<br>
-
-{{#link-to 'index'}}Back{{/link-to}}!
+<div class='back-button'>{{#link-to 'index'}}Back{{/link-to}}!</div>
