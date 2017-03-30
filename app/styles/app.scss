@@ -3,6 +3,7 @@
 
 $blue: #3ec2c0;
 $orange: #ff6e40;
+$white: #fff;
 
 // reduce size of all input fields
 input {
@@ -21,6 +22,8 @@ input {
   position: absolute;
   left: 5%;
   right: 5%;
+  position: absolute;
+  top: 50px;
   width: 90%;
 }
 
@@ -30,6 +33,9 @@ input {
   border: 0;
   border-radius: 0;
   color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 // Nav bar drop shaddow
@@ -164,4 +170,17 @@ a {
   border: 0;
   box-shadow: 0;
   text-shadow: 0;
+}
+
+footer {
+  background-color: $blue;
+  bottom: 0; // fixed position at the bottom of the scren
+  clear: both;
+  color: $white;
+  padding-bottom: 2px; // gives text buffer from top/bottom of div
+  padding-top: 2px; // gives text buffer from top/bottom of div
+  position: fixed; // uses the bottom location
+  text-align: center;
+  width: 100%; // keeps it the width of the page
+  z-index: 1;
 }
