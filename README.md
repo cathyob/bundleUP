@@ -14,7 +14,7 @@ I was inspired by my own struggle of wearing the wrong layers in Boston. I moved
 
 You can use this app to keep track of how you're feeling right now and describe what you're wearing, doing, and the conditions outside so you can be as comfortable as possible!
 
-TODO An embedded screenshot of the app TODO
+![alt text](https://raw.githubusercontent.com/cathyob/bundleUP/master/app/bundleUP-view.png "Screenshot of Home Page")
 
 ## User Stories
 
