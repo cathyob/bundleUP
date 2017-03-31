@@ -5,6 +5,10 @@ $blue: #3ec2c0;
 $orange: #ff6e40;
 $white: #fff;
 
+.bundleUP-logo {
+  height: 50px;
+}
+
 // reduce size of all input fields
 input {
   height: 24px !important;
@@ -19,9 +23,10 @@ input {
 // Cancels out the edge-to-edge, whole width issue for content
 .row{
   margin: 0 auto;
-  position: absolute;
   left: 5%;
   right: 5%;
+  padding-bottom: 30px;
+  padding-top: 20px;
   position: absolute;
   top: 50px;
   width: 90%;
@@ -73,6 +78,10 @@ input {
 a {
   color: $blue;
   font-weight: bold;
+}
+
+.form-group {
+  padding: 4px;
 }
 
 // a class for my required fields text
