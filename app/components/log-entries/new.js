@@ -5,10 +5,10 @@ export default Ember.Component.extend({
   log: {},
   credentials: storageFor('auth'),
   isAuthenticated: Ember.computed.bool('credentials.token'),
-  init() {
-    this._super(...arguments);
-    this.set('log', {});
-  },
+  // init() {
+  //   this._super(...arguments);
+  //   this.set('log', {});
+  // },
   actions: {
   save () {
     // console.log('Save the log');
