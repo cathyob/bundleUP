@@ -49,5 +49,8 @@ export default Ember.Route.extend({
 
       return false;
     },
+    sendZip (zipCode) {
+      console.log('getting the ' + zipCode);
+    },
   },
 });
