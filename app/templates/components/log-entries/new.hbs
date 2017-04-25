@@ -1,17 +1,17 @@
 <p class="attention">* Required field</p>
 <form class="form-group" {{action 'save' on='submit'}}>
-  Location: <span class="attention">*</span>{{input class="form-control" value=log.location required="true" maxlength="50"}}
+  Location: <span class="attention">*</span>{{input class="form-control" value=log.location required="true" maxlength="50" id="log_location"}}
   <div class="temp">
     <div class="temp-1">
-      Feels Like Temperature: <span class="attention">* (Numbers only)</span>{{input class="form-control" value=log.feelsLike type="number" required="true"}}
+      Feels Like Temperature: <span class="attention">* (Numbers only)</span>{{input class="form-control" value=log.feelsLike type="number" required="true" id="log_feelsLike"}}
     </div>
     <div class="temp-2">
-      Temperature: <span class="attention">(Numbers only)</span>{{input class="form-control" value=log.temp type="number"}}
+      Temperature: <span class="attention">(Numbers only)</span>{{input class="form-control" value=log.temp type="number" id="log_temp"}}
     </div>
   </div>
   <div class="user-notes">
     <div class="user-notes-1">
-      Weather Conditions: <span class="attention">*</span>{{input class="form-control" value=log.weatherConditions required="true" maxlength="50"}}
+      Weather Conditions: <span class="attention">*</span>{{input class="form-control" value=log.weatherConditions required="true" maxlength="50" id="log_weatherConditions"}}
     </div>
     <div class="user-notes-2">
       Accessories: {{input class="form-control" value=log.accessories maxlength="200"}}

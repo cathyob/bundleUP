@@ -50,7 +50,16 @@ export default Ember.Route.extend({
       return false;
     },
     sendZip (zipCode) {
-      console.log('getting the ' + zipCode);
+      if (zipCode === null) {
+        this.get('flashMessages')
+        .danger('Please enter a valid zip code.');
+      } else {
+        $('#log_location').val(zipCode.address);
+        $('#log_feelsLike').val(zipCode.feelsLike);
+        $('#log_temp').val(zipCode.actualTemp);
+        $('#log_weatherConditions').val(zipCode.weatherCondition);
+        this.get('flashMessages').success('The current weather details have been added for ' + zipCode.address + '!');
+      }
     },
   },
 });
