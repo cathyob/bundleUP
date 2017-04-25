@@ -193,3 +193,9 @@ footer {
   width: 100%; // keeps it the width of the page
   z-index: 1;
 }
+
+.portfolio-link,
+.portfolio-link:hover {
+  color: $white;
+  text-decoration: underline;
+}
