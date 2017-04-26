@@ -54,10 +54,10 @@ export default Ember.Route.extend({
         this.get('flashMessages')
         .danger('Please enter a valid zip code.');
       } else {
-        $('#log_location').val(zipCode.address);
-        $('#log_feelsLike').val(zipCode.feelsLike);
-        $('#log_temp').val(zipCode.actualTemp);
-        $('#log_weatherConditions').val(zipCode.weatherCondition);
+        Ember.$('#log_location').val(zipCode.address);
+        Ember.$('#log_feelsLike').val(zipCode.feelsLike);
+        Ember.$('#log_temp').val(zipCode.actualTemp);
+        Ember.$('#log_weatherConditions').val(zipCode.weatherCondition);
         this.get('flashMessages').success('The current weather details have been added for ' + zipCode.address + '!');
       }
     },

@@ -11,6 +11,17 @@ export default Ember.Component.extend({
   // },
   actions: {
   save () {
+
+    // Temporary fix to log not saving right.
+    // FUTURE TODO: Fix this
+    this.set('log.location', Ember.$('#log_location').val());
+    this.set('log.temp', Ember.$('#log_temp').val());
+    this.set('log.feelsLike', Ember.$('#log_feelsLike').val());
+    this.set('log.weatherConditions', Ember.$('#log_weatherConditions').val());
+    //
+    // let location =  $('#log_location').val();
+    // this.set('log.location', location);
+
     // console.log('Save the log');
     this.sendAction('save',
     this.get('log'));

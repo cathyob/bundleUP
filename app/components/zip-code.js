@@ -3,6 +3,10 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   zipcode: Ember.inject.service(),
   zip: {},
+  // init() {
+  //   this._super(...arguments);
+  //   this.set('zip', {});
+  // },
   actions: {
     submit () {
       let zipCode = this.get('zip.location');
